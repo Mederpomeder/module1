@@ -65,7 +65,7 @@ def get_page_data(html):
     # photo, date, price, currency
     for product in products:
         try:
-            photo = product.find('img').get('src')
+            photo = product.find('div', class_='image').find('img').get('data-src')
         except:
             photo = ''
 
